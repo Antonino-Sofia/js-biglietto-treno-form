@@ -64,10 +64,16 @@ generateTicket.addEventListener("submit", function (e) {
   } else if (ageUser >= 65) {
     discount = (ticketPrice * discountOver) / 100;
   }
-});
 
-//OUTPUT
-kmInfoElement.innerHTML = kmUser;
-ageInfoElement.innerHTML = ageUser;
-priceInfoElement.innerHTML = ticketPriceFormatted;
-scontoInfoElement.innerHTML = "Sconto applicato: ${discount}";
+  ticketPrice -= discount;
+  console.log(ticketPrice);
+
+  const ticketPriceFormatted = ticketPrice.toFixed(2);
+  console.log(`Il prezzo del biglietto è ${ticketPriceFormatted}€`);
+
+  //OUTPUT
+  kmInfoElement.innerHTML = kmUser;
+  ageInfoElement.innerHTML = ageUser;
+  priceInfoElement.innerHTML = ticketPriceFormatted;
+  scontoInfoElement.innerHTML = "Sconto applicato: ${discount}";
+});
