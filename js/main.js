@@ -21,3 +21,10 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
 */
+
+//FORM
+const generateTicket = document.getElementById("generate-ticket");
+//KM
+const kmUserElement = document.getElementById("km-user");
+//AGE
+const ageUserElement = document.getElementById("age-user");
