@@ -28,3 +28,24 @@ const generateTicket = document.getElementById("generate-ticket");
 const kmUserElement = document.getElementById("km-user");
 //AGE
 const ageUserElement = document.getElementById("age-user");
+
+//INFO
+
+//Km
+const kmInfoElement = document.getElementById("km-info");
+//Age
+const ageInfoElement = document.getElementById("age-info");
+//Price
+const priceInfoElement = document.getElementById("price-info");
+//Sconto
+const scontoInfoElement = document.getElementById("sconto-info");
+
+console.log(kmInfoElement);
+console.log(ageInfoElement);
+console.log(priceInfoElement);
+
+generateTicket.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  //INFO DEFAULT
+});
