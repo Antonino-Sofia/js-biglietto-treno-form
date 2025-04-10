@@ -47,5 +47,27 @@ console.log(priceInfoElement);
 generateTicket.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  //INFO DEFAULT
+  //INFO DI DEFAULT
+  const ticketPriceKm = 0.21;
+  const discountUnder = 20;
+  const discountOver = 40;
+
+  // INPUT
+  const kmUser = parseFloat(kmUserElement.value);
+  const ageUser = parseInt(ageUserElement.value);
+  let ticketPrice = ticketPriceKm * kmUser;
+
+  let discount = 0;
+
+  if (ageUser < 18) {
+    discount = (ticketPrice * discountUnder) / 100;
+  } else if (ageUser >= 65) {
+    discount = (ticketPrice * discountOver) / 100;
+  }
 });
+
+//OUTPUT
+kmInfoElement.innerHTML = kmUser;
+ageInfoElement.innerHTML = ageUser;
+priceInfoElement.innerHTML = ticketPriceFormatted;
+scontoInfoElement.innerHTML = "Sconto applicato: ${discount}";
